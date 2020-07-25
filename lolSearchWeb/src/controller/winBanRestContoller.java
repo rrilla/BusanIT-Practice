@@ -23,32 +23,18 @@ public class winBanRestContoller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doGet() 호출됨");
 		
-		String strBno = request.getParameter("bno");
 		String strJson = "";
 		WinBanDao winbanDao = WinBanDao.getInstance();
 		
-		if (strBno == null) {
-			winbanDao = winbanDao.getInstance();
-			List<WinRatio> list = winbanDao.selectAll();
+		winbanDao = winbanDao.getInstance();
+		List<WinRatio> list = winbanDao.selectAll();
 			
-			// 데이터 응답 포맷 2가지 - JSON, XML
-			// 자바 객체의 데이터를 JSON 포맷 문자열로 변환하기
-			Gson gson = new Gson();
-			strJson = gson.toJson(list);
-			System.out.println(strJson);
-		
-		} else { // strBno != null
-			
-			int bno = Integer.parseInt(strBno);
-			
-			winbanDao = WinBanDao.getInstance();
-//			WinRatio winRatio = winbanDao.selectOne(bno);
-			
-			Gson gson = new Gson();
-//			strJson = gson.toJson(winRatio);
-			System.out.println(strJson);
-		}
-		
+		// 데이터 응답 포맷 2가지 - JSON, XML
+		// 자바 객체의 데이터를 JSON 포맷 문자열로 변환하기
+		Gson gson = new Gson();
+		strJson = gson.toJson(list);
+		System.out.println(strJson);
+				
 		// 클라이언트로 출력하기
 		response.setContentType("application/json; charset=UTF-8");
 		PrintWriter out = response.getWriter();

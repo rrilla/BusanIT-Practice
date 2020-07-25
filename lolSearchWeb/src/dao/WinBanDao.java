@@ -35,7 +35,7 @@ public class WinBanDao {
 	}
 	
 	public List<WinRatio> selectAll() {
-		List<WinRatio> chmapList = new ArrayList<WinRatio>();
+		List<WinRatio> list = new ArrayList<WinRatio>();
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -54,7 +54,7 @@ public class WinBanDao {
 				win.setWinRatio(rs.getString("winratio"));
 				win.setPickRatio(rs.getString("pickratio"));
 				win.setBanRatio(rs.getString("banratio"));
-				chmapList.add(win);
+				list.add(win);
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -70,6 +70,6 @@ public class WinBanDao {
 				e.printStackTrace();
 			}
 		}
-		return chmapList;
+		return list;
 	}
 }
