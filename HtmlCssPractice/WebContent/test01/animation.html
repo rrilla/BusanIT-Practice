@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		div.one {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 100px;
+			background-color: red;
+			position: relative;
+			
+			animation: move 1s ease-in-out Infinite;
+			
+		/* 	animation-name: move;
+			animation-duration: 0.5s;		
+			animation-iteration-count: infinite;
+			animation-timing-function:ease-in-out */;
+			
+		}
+		
+		div.two {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 100px;
+			background-color: blue;
+			position: relative;
+			
+			animation: move 1s linear Infinite alternate;
+		}
+		
+		div.three {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 100px;
+			background-color: yellow;
+			position: relative;
+			
+			animation: move 1s Infinite reverse;
+		}	
+		
+		@keyframes move {
+			0% {
+				left:0px; top:0px;
+			}
+			25% {
+				left:500px; top:0px;
+			}
+			50% {
+				left:500px; top:500px;
+			}
+			75% {
+				left:0px; top:500px;
+			}
+			100% {
+				left:0px; top:0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+	<div class="three"></div>
+</body>
+</html>
