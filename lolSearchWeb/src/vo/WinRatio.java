@@ -10,8 +10,9 @@ public class WinRatio {
 	
 	public WinRatio() {}
 
-	public WinRatio(String name, String line, String winRatio, String pickRatio) {
+	public WinRatio(int no, String name, String line, String winRatio, String pickRatio) {
 		super();
+		this.no = no;
 		this.name = name;
 		this.line = line;
 		this.winRatio = winRatio;

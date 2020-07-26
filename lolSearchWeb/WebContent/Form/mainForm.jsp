@@ -85,7 +85,19 @@
 	} // processList()
 
 	$('#btnList').click(function () {
+		$.ajax({
+			url: '../api/winBan',
+			method: 'DELETE',
+			success: function (result) {
+				alert(result);
+				
+			},
+			error: function () {
+				alert('갱신 에러 발생!')
+			}
+		});
 		getList();
+		/* alert('갱신됬따!') */
 	});
 </script>
 <script>
