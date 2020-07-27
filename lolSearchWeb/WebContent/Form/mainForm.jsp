@@ -51,11 +51,11 @@
 				<thead>
 					<tr>
 						<th>번호</th>
-						<th>챔프이름</th>
-						<th>포지션</th>
-						<th>승률</th>
-						<th>픽률</th>
-						<th>밴률</th>
+						<th id="name">챔프이름</th>
+						<th id="line">포지션</th>
+						<th id="wRatio">승률</th>
+						<th id="pRatio">픽률</th>
+						<th id="bRatio">밴률</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -84,7 +84,7 @@
 	function processList(list) {
 		var str = '';
 		
-		for (let winRatio of list) {
+		for (let winRatio of list) {	//sort
 			str += '<tr>';
 			str += '<td>' + winRatio.no + '</td>';
 			str += '<td>' + winRatio.name + '</td>';
@@ -97,6 +97,10 @@
 		
 	$('#tblList > tbody').html(str);
 	} // processList()
+	
+	$('#name').click(function (){
+		
+	});
 
 	$('#btnList').click(function () {
 		$.ajax({
