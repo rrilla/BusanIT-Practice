@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap-theme.css" rel="stylesheet">
+<link href="../css/custom2.css" rel="stylesheet">
+<style>
+body {
+	background-color: black;
+}
+
+.carousel-inner img{
+	width: 100%;
+	height: 80%;
+} 
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="container">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse ">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">메뉴1 </a></li>
+					<li><a href="#">메뉴2</a></li>
+					<li><a href="#">메뉴3</a></li>
+					<!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">드롭다운 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+          </li> -->
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="검색">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+
+			<div id="carousel-example-generic" class="carousel slide">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Carousel items -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="../images/와인.jpg" alt="First slide">
+					</div>
+					<div class="item">
+						<img src="../images/와인2.jpg" alt="Second slide">
+					</div>
+					<div class="item">
+						<img src="../images/와인3.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="../images/와인4.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="../images/위스키1.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="../images/종합술4.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="../images/종합술5.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="../images/칵테일1.jpeg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="../images/칵테일5.jpg" alt="Third slide">
+					</div>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic"
+					data-slide="prev"> <!-- <span class="icon-prev"></span> --> <img
+					class="control">
+				</a> <a class="right carousel-control" href="#carousel-example-generic"
+					data-slide="next"> <!--  <span class="icon-next"></span> --> <img
+					class="control">
+				</a>
+			</div>
+			<!-- <header>
+				<h2>
+					<img src="../images/종합술4.jpg" width="100%" height="70%" />
+				</h2>
+			</header> -->
+
+			<div class="row">
+				<div class="col-md-2">
+					<ul class="nav">
+						<li>menu 1</li>
+						<li>menu 2</li>
+						<li>menu 3</li>
+						<li>menu 4</li>
+					</ul>
+				</div>
+				<div class="col-md-8 cont">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Mauris rutrum vitae lectus sit amet tincidunt. Aliquam id
+						fringilla sapien. Mauris eu nulla at nunc mollis pharetra. Fusce
+						iaculis lectus nec enim feugiat luctus. Nunc tempor orci auctor
+						iaculis consectetur. Cras pellentesque lorem sit amet tempor
+						convallis. Sed ut cursus urna, sed adipiscing elit. Curabitur sit
+						amet adipiscing felis. Duis pellentesque justo quam. Integer
+						lobortis vehicula mauris, at ornare turpis consectetur at. Duis
+						tristique velit tortor, quis viverra dolor venenatis eget.</p>
+
+					<p>Nunc venenatis laoreet ullamcorper. Fusce at orci vulputate,
+						mattis neque vel, euismod ipsum. Proin varius metus neque. In
+						congue, arcu eu posuere gravida, erat sem auctor orci, eu
+						convallis tortor est id sapien. Phasellus gravida quam est, et
+						posuere diam cursus ut. Donec et ipsum laoreet, mattis mauris sit
+						amet, suscipit augue. Etiam vel massa consequat leo pulvinar
+						fermentum a vel urna. Duis malesuada tincidunt tortor id mattis.
+						Sed facilisis massa libero, ut cursus turpis molestie a. Sed
+						ornare, nibh et suscipit semper, sapien lorem auctor nisl, et
+						volutpat lacus quam sit amet mauris.</p>
+
+				</div>
+				<div class="col-md-2">
+					<div class="banner">기타 부가적인 내용이 들어 가는 곳</div>
+				</div>
+			</div>
+			<hr>
+			<footer> 여기는 푸터가 들어가는 곳입니다. </footer>
+		</div>
+	</div>
+	<!-- container-fluid END -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script>
+		$('.carousel').carousel();
+	</script>
+</body>
+</html>
