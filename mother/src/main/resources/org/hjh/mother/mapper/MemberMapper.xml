@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.hjh.mother.mapper.MemberMapper">
+
+	<select id="idCheck" resultType="org.hjh.mother.domain.MemberVo" parameterType="String">
+		select id,gender from member where id = #{id} 
+	</select>
+
+	<insert id="join">
+		insert into member(mno, id, password, name, gender)
+		values(seq_member.nextval, #{id},#{password},#{name},#{gender, jdbcType=VARCHAR}) 
+	</insert>
+	
+	<select id="loginId" resultType="org.hjh.mother.domain.MemberVo">
+		select id from member where id = #{id} 
+	</select>
+	
+	<select id="loginPw" resultType="org.hjh.mother.domain.MemberVo">
+		select id,password from member where id = #{id} and password = #{password}
+	</select>
+	
+	<delete id="delete">
+		delete from board where bno = #{bno}
+	</delete>
+	
+	<update id="update">
+		update board set title = #{title}, content = #{content}, writer = #{writer},
+		updatedate = sysdate where bno = #{bno}
+	</update>
+	
+</mapper>
